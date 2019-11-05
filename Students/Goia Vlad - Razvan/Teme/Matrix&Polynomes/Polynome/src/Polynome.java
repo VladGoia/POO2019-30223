@@ -209,7 +209,31 @@ import java.util.Scanner;
 					return "-x + " + coeff[0];
 				else
 					return coeff[1] + "x + " + coeff[0];
-
 		
+		String polynome = "";
+		if (coeff[degree] == 1)
+			polynome = "x^" + degree;
+		else if (coeff[degree] == -1)
+			polynome = "-x^" + degree;
+		else
+			polynome = coeff[degree] + "x^" + degree;
+
+		for (int i = degree - 1; i >= 0; i--) {
+			if (coeff[i] == 0)
+				continue;
+			else if (coeff[i] == 1)
+				polynome = polynome + " + 1";
+			else if (coeff[i] == -1)
+				polynome = polynome + " - 1";
+			else if (coeff[i] > 0)
+				polynome = polynome + " + " + coeff[i];
+			else if (coeff[i] < 0)
+				polynome = polynome + " - " + (-coeff[i]);
+			if (i == 1)
+				polynome = polynome + "x";
+			else if (i > 1)
+				polynome = polynome + "x^" + i;
+		}
+		return polynome;	
 	}
 }
