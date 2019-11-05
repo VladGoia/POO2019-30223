@@ -210,32 +210,32 @@ import java.util.Scanner;
 				else
 					return coeff[1] + "x + " + coeff[0];
 
-		String poly = "";
+		String polynome = "";
 
 		if (coeff[degree] == 1)
-			poly = "x^" + degree;
+			polynome = "x^" + degree;
 		else if (coeff[degree] == -1)
-			poly = "-x^" + degree;
+			polynome = "-x^" + degree;
 		else
-			poly = coeff[degree] + "x^" + degree;
+			polynome = coeff[degree] + "x^" + degree;
 
 		for (int i = degree - 1; i >= 0; i--) {
 			if (coeff[i] == 0)
 				continue;
 			else if (coeff[i] == 1)
-				poly = poly + " + 1";
+				polynome = polynome + " + 1";
 			else if (coeff[i] == -1)
-				poly = poly + " - 1";
+				polynome = polynome + " - 1";
 			else if (coeff[i] > 0)
-				poly = poly + " + " + coeff[i];
+				polynome = polynome + " + " + coeff[i];
 			else if (coeff[i] < 0)
-				poly = poly + " - " + (-coeff[i]);
+				polynome = polynome + " - " + (-coeff[i]);
 
 			if (i == 1)
-				poly = poly + "x";
+				polynome = polynome + "x";
 			else if (i > 1)
-				poly = poly + "x^" + i;
+				polynome = polynome + "x^" + i;
 		}
-		return poly;
+		return polynome;
 	}
 }
