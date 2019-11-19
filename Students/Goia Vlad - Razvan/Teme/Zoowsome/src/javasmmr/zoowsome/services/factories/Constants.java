@@ -42,4 +42,15 @@ public final class Constants {
             public static final String Spider = "SPIDER";
         }
     }
+    public static final class Employees {
+		public static final String Manager = "Manager";
+		public static final String Investor = "Investor";
+		public static final String Caretaker = "Caretaker";
+
+	public static final class Caretakers {
+		public static final String TCO_SUCCES = "SUCCES";
+		public static final String TCO_KILLED = "KILLED";
+		public static final String TCO_NO_TIME = "NO_TIME";
+		}
+	}
 }

@@ -2,21 +2,20 @@ package javasmmr.zoowsome.models.animals;
 
 public class Cockroach extends Insect {
 
-    public Cockroach() {
-        setNumberOfLegs(6);
-        setName("Brachypelma smithi");
-        setCanFly(false);
+    public Cockroach(double maintenanceCost, double dangerPerc) {
+    	super(maintenanceCost, dangerPerc);
+        setNrOfLegs(6);
+        setName("Phylum Arthropoda");
+        setCanFly(true);
         setDangerous(false);
     }
-
-    public Cockroach(
-            Integer numberOfLegs,
-            String name,
-            Boolean canFly,
-            Boolean dangerous) {
-        setNumberOfLegs(numberOfLegs);
-        setName(name);
-        setCanFly(canFly);
-        setDangerous(dangerous);
-    }
+    
+    public boolean kill() {
+		double randomNr = Math.random();
+		if (randomNr < this.getDangerPerc()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

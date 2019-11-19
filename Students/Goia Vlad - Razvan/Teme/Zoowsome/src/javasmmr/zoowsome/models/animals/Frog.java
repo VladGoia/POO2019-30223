@@ -2,21 +2,20 @@ package javasmmr.zoowsome.models.animals;
 
 public class Frog extends Aquatic {
 
-    public Frog() {
-        setNumberOfLegs(4);
-        setName("Agalychnis callidryas");
-        setAverageSwimDepth(100);
-        setWaterType(WaterType.FRESHWATER);
+    public Frog(double maintenanceCost, double dangerPerc) {
+        	super(maintenanceCost, dangerPerc);
+            setNrOfLegs(4);
+            setName("Agalychnis callidryas");
+            setAverageSwimDepth(50);
+            setWaterType(WaterType.SALTWATER);
+        }
+        
+        public boolean kill() {
+    		double randomNr = Math.random();
+    		if (randomNr < this.getDangerPerc()) {
+    			return true;
+    		} else {
+    			return false;
+    		}
+    	}
     }
-
-    public Frog(
-            Integer numberOfLegs,
-            String name,
-            Integer averageSwimDepth,
-            WaterType waterType) {
-        setNumberOfLegs(numberOfLegs);
-        setName(name);
-        setAverageSwimDepth(averageSwimDepth);
-        setWaterType(waterType);
-    }
-}

@@ -2,21 +2,20 @@ package javasmmr.zoowsome.models.animals;
 
 public class Shark extends Aquatic {
 
-    public Shark() {
-        setNumberOfLegs(0);
+    public Shark(double maintenanceCost, double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
+		setNrOfLegs(0);
         setName("Rhincodon typus");
         setAverageSwimDepth(1800);
         setWaterType(WaterType.SALTWATER);
     }
 
-    public Shark(
-            Integer numberOfLegs,
-            String name,
-            Integer averageSwimDepth,
-            WaterType waterType) {
-        setNumberOfLegs(numberOfLegs);
-        setName(name);
-        setAverageSwimDepth(averageSwimDepth);
-        setWaterType(waterType);
-    }
+    public boolean kill() {
+		double randomNr = Math.random();
+		if (randomNr < this.getDangerPerc()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

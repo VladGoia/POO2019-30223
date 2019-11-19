@@ -7,13 +7,13 @@ public class InsectFactory extends SpeciesFactory {
     @Override
     public Animal getAnimal(String type) {
         if (Constants.Animals.Insects.Butterfly.equals(type)) {
-            return new Butterfly();
+            return new Butterfly(0, 0.0);
         } else if (Constants.Animals.Insects.Cockroach.equals(type)) {
-            return new Cockroach();
+            return new Cockroach(0, 0.0);
         } else if (Constants.Animals.Insects.Spider.equals(type)) {
-            return new Spider();
+            return new Spider(0, 0.3);
         } else {
             return null;
         }
     }
-}
+} 
