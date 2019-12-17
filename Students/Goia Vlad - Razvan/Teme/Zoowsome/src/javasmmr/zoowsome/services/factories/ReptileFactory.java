@@ -6,7 +6,6 @@ import javasmmr.zoowsome.models.animals.Gecko;
 import javasmmr.zoowsome.models.animals.Snake;
 
 public class ReptileFactory extends SpeciesFactory {
-    @Override
     public Animal getAnimal(String type) {
         if (Constants.Animals.Reptiles.Crocodile.equals(type)) {
             return new Crocodile(2, 0.9);

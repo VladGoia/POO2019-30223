@@ -14,7 +14,7 @@ public final class Constants {
 
         public static final class Mammals {
             public static final String Cow = "COW";
-            public static final String Monkey = "Monkey";
+            public static final String Monkey = "MONKEY";
             public static final String Tiger = "TIGER";
         }
 
@@ -52,5 +52,16 @@ public final class Constants {
 		public static final String TCO_KILLED = "KILLED";
 		public static final String TCO_NO_TIME = "NO_TIME";
 		}
+	}
+    
+    public static final class XML_TAGS {
+		public static final String ANIMAL = "ANIMAL";
+		public static final String DISCRIMINANT = "DISCRIMINANT";
+		public static final String EMPLOYEE = "EMPLOYESS";
+	}
+    
+    public static final class Frames {
+		public static final int HEIGHT = 500;
+		public static final int WIDTH = 700;
 	}
 }

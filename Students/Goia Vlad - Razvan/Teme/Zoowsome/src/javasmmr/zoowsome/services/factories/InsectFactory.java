@@ -3,8 +3,6 @@ package javasmmr.zoowsome.services.factories;
 import javasmmr.zoowsome.models.animals.*;
 
 public class InsectFactory extends SpeciesFactory {
-
-    @Override
     public Animal getAnimal(String type) {
         if (Constants.Animals.Insects.Butterfly.equals(type)) {
             return new Butterfly(0, 0.0);

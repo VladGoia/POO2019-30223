@@ -6,8 +6,6 @@ import javasmmr.zoowsome.models.animals.Monkey;
 import javasmmr.zoowsome.models.animals.Tiger;
 
 public class MammalFactory extends SpeciesFactory {
-
-    @Override
     public Animal getAnimal(String type) {
         if (Constants.Animals.Mammals.Cow.equals(type)) {
             return new Cow( 2, 0.1);

@@ -1,5 +1,12 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.Constants;
+
 public class Eagle extends Bird {
 
     public Eagle(double maintenanceCost, double dangerPerc) 
@@ -18,5 +25,9 @@ public class Eagle extends Bird {
 		} else {
 			return false;
 		}
+	}
+    public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Birds.Eagle);
 	}
 }
